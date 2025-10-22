@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Organização Solidária — ações sociais, voluntariado e projetos comunitários." />
+    <title>Organização Solidária - Início</title>
+    <link rel="stylesheet" href="css/estilo.min.css" />
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <div class="header-top">
+            <figure class="logo">
+                <img src="img/logo.png" alt="Logotipo Organização Solidária" width="160" height="auto" />
+                <figcaption class="sr-only">Organização Solidária</figcaption>
+            </figure>
+
+            <div class="header-actions">
+                <button id="toggle-tema" class="btn-tema" aria-label="Alternar modo escuro" aria-pressed="false">
+                    🌙 Modo Escuro
+                </button>
+            </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Menu principal">
+            <ul>
+                <li><a href="index.min.html" aria-current="page">Início</a></li>
+                <li><a href="projetos.min.html">Projetos</a></li>
+                <li><a href="cadastro.min.html">Cadastro</a></li>
+            </ul>
+        </nav>
+
+        <address class="contato" aria-label="Informações de contato">
+            <strong>Contato:</strong>
+            <p>
+                Email: <a href="mailto:contato@organizacaosolidaria.org">contato@organizacaosolidaria.org</a>
+                |
+                Tel: <a href="tel:+5511999999999">(11) 99999-9999</a>
+            </p>
+            <p>Endereço: Rua Exemplo, 123 — Bairro, Cidade - SP</p>
+        </address>
+    </header>
+
+    <main id="conteudo">
+        <section aria-labelledby="bemvindo" class="hero">
+            <h1 id="bemvindo">Bem-vindo à Organização Solidária</h1>
+            <p>Somos uma instituição sem fins lucrativos dedicada a apoiar comunidades em situação de vulnerabilidade social. Nosso objetivo é transformar vidas através da solidariedade e do trabalho coletivo.</p>
+        </section>
+
+        <section aria-labelledby="missao" class="missao">
+            <h2 id="missao">Nossa Missão</h2>
+            <p>Promover ações sociais, culturais e educacionais que contribuam para o desenvolvimento humano e o bem-estar social.</p>
+        </section>
+
+        <section aria-labelledby="como-ajudar" class="como-ajudar">
+            <h2 id="como-ajudar">Como Ajudar</h2>
+            <p>Saiba como participar como voluntário ou como realizar doações — visite a página de projetos e o formulário de cadastro.</p>
+            <ul>
+                <li><a href="projetos.min.html">Ver projetos</a></li>
+                <li><a href="cadastro.min.html">Cadastrar-se como voluntário</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>&copy; <span id="ano"></span> Organização Solidária. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/main.min.js"></script>
+    <script>
+        // Fallback simples para preencher ano, caso o script principal não faça
+        (function(){
+            var el = document.getElementById('ano');
+            if(el && !el.textContent.trim()){
+                el.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+</body>
+</html>
